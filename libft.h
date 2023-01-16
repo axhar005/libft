@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 14:29:31 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/16 15:17:47 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/16 18:35:21 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ char	*ft_strrchr(const char *str, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_atoi(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
 // memory
 void	*ft_memset(void *b, int c, size_t len);

@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:35:05 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/12 15:45:12 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/16 18:03:41 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	res = 0;
 	i = 0;
+	if (!str)
+		return(0);
 	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\f' || str[i] == '\r'
 		|| str[i] == '\v' || str[i] == ' ')
 	{
