@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 18:33:25 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/13 16:35:29 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/16 17:07:54 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_strrchr(const char *str, int c)
 {
 	size_t i;
 
-	i = ft_strlen(str);
 	if (!str)
 		return (NULL);
+	i = ft_strlen(str);
 	while (i > 0)
 	{
 		if (str[i] == (char)c)
