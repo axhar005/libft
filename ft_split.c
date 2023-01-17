@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 15:51:54 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/17 12:05:13 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:01:54 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ static char	**clean(char **tab)
 	free(tab);
 	return (NULL);
 }
+
 static char	**check(char **dest, char *str, int word, int c)
 {
 	int	last_pos;
@@ -70,10 +71,12 @@ static char	**check(char **dest, char *str, int word, int c)
 	}
 	return (dest);
 }
+
 char	**ft_split(char const *str, char c)
 {
-	char **new_tab;
-	int word;
+	char	**new_tab;
+	int		word;
+
 	word = num_word(str, c);
 	new_tab = ft_calloc(word + 1, sizeof(char *));
 	if (new_tab == NULL)

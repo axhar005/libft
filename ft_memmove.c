@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:22:50 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/12 15:44:53 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:01:34 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		return (d);
 	if (d < s)
 	{
-		i = 0;
-		while (i < len)
-		{
-			d[i] = s[i];
-			i++;
-		}
+		ft_memcpy(d, s, len);
 	}
 	else
 	{

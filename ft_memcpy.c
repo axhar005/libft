@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 17:20:37 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/12 15:43:44 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:48:01 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	const char *s;
-	char *d;
-	size_t i;
+	const char	*s;
+	char		*d;
+	size_t		i;
 
 	i = 0;
 	s = src;

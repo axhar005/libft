@@ -6,20 +6,31 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:35:05 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/17 14:15:59 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:24:12 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static	int	check(char *str, int i)
+{
+	int	res;
+
+	res = 0;
+	while (ft_isdigit(str[i]) == 1)
+	{
+		res = res * 10 + str[i] - '0';
+		i++;
+	}
+	return (res);
+}
+
 int	ft_atoi(const char *str)
 {
-	int res;
-	int sign;
-	int i;
+	int	sign;
+	int	i;
 
 	sign = 1;
-	res = 0;
 	i = 0;
 	if (!str)
 		return (0);
@@ -38,10 +49,5 @@ int	ft_atoi(const char *str)
 		sign = 1;
 		i++;
 	}
-	while (ft_isdigit(str[i]) == 1)
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	return (res * sign);
+	return (check((char *)str, i) * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:48:37 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/12 15:44:57 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:47:55 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char *p1;
-	const unsigned char *p2;
-	size_t i;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
+	size_t				i;
 
 	p1 = s1;
 	p2 = s2;

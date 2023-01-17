@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:00:32 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/16 18:27:49 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:02:27 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t needle_len;
+	size_t	i;
+	size_t	needle_len;
 
 	i = 0;
 	if (!haystack && len == 0)
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		if (i + needle_len > len)
 			return (NULL);
 		if (ft_strncmp(&haystack[i], needle, needle_len) == 0)
-			return (char *)(&haystack[i]);
+			return ((char *)(&haystack[i]));
 		i++;
 	}
 	return (NULL);

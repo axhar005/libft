@@ -6,18 +6,24 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:20:45 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/16 12:58:00 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:24:13 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*check(char *new)
+{
+	new[0] = '\0';
+	return (new);
+}
+
 char	*ft_strtrim(const char *str, const char *set)
 {
-	int start;
-	int end;
-	int new_len;
-	char *new;
+	int		start;
+	int		end;
+	int		new_len;
+	char	*new;
 
 	start = 0;
 	end = strlen(str) - 1;
@@ -28,8 +34,7 @@ char	*ft_strtrim(const char *str, const char *set)
 		new = (char *)malloc(1);
 		if (!new)
 			return (NULL);
-		new[0] = '\0';
-		return (new);
+		return (check(new));
 	}
 	while (end >= start && strchr(set, str[end]))
 		end--;

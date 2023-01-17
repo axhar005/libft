@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:28:07 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/17 13:47:35 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:48:47 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int i;
-	char *new;
+	unsigned int	i;
+	char			*new;
 
 	if (!s || !f)
 		return (NULL);
 	i = 0;
-    new = ft_strdup(s);
-    if (!new)
-        return (NULL);
-    while (new[i])
-    {
-        new[i] = f(i, new[i]);
-        i++;
-    }
-    return (new);
+	new = ft_strdup(s);
+	if (!new)
+		return (NULL);
+	while (new[i])
+	{
+		new[i] = f(i, new[i]);
+		i++;
+	}
+	return (new);
 }

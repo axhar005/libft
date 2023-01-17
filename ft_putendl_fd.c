@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:11:32 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/17 14:14:27 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:48:14 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!s)
