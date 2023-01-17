@@ -2,10 +2,8 @@
 
 int	main(void)
 {
-	int d = -99528;
-	char *s = ft_itoa(d);
-	printf("%s", s);
-
+	int d = 99528;
+	ft_putnbr_fd(d, 1);
 	return (0);
 }
 

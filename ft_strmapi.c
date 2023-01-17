@@ -1,47 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 13:35:05 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/17 14:15:59 by oboucher         ###   ########.fr       */
+/*   Created: 2023/01/17 13:28:07 by oboucher          #+#    #+#             */
+/*   Updated: 2023/01/17 13:47:35 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int res;
-	int sign;
-	int i;
+	unsigned int i;
+	char *new;
 
-	sign = 1;
-	res = 0;
+	if (!s || !f)
+		return (NULL);
 	i = 0;
-	if (!str)
-		return (0);
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\f' || str[i] == '\r'
-		|| str[i] == '\v' || str[i] == ' ')
-	{
-		i++;
-	}
-	if (str[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (str[i] == '+')
-	{
-		sign = 1;
-		i++;
-	}
-	while (ft_isdigit(str[i]) == 1)
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	return (res * sign);
+    new = ft_strdup(s);
+    if (!new)
+        return (NULL);
+    while (new[i])
+    {
+        new[i] = f(i, new[i]);
+        i++;
+    }
+    return (new);
 }

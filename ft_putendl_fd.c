@@ -1,47 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 13:35:05 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/17 14:15:59 by oboucher         ###   ########.fr       */
+/*   Created: 2023/01/17 14:11:32 by oboucher          #+#    #+#             */
+/*   Updated: 2023/01/17 14:14:27 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int res;
-	int sign;
 	int i;
 
-	sign = 1;
-	res = 0;
 	i = 0;
-	if (!str)
-		return (0);
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\f' || str[i] == '\r'
-		|| str[i] == '\v' || str[i] == ' ')
+	if (!s)
+		return ;
+	while (s[i])
 	{
+		write(fd, &s[i], 1);
 		i++;
 	}
-	if (str[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (str[i] == '+')
-	{
-		sign = 1;
-		i++;
-	}
-	while (ft_isdigit(str[i]) == 1)
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	return (res * sign);
+	write(fd, "\n", 1);
 }
