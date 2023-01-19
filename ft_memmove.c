@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:22:50 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/17 17:01:34 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/19 15:46:45 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	d = dest;
 	s = src;
+	if (!dest || !src)
+		return (NULL);
 	if (len == 0 || (!s && !d) || s == d)
 		return (d);
 	if (d < s)

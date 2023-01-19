@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 15:51:54 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/17 17:01:54 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/19 15:53:07 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,11 @@ char	**ft_split(char const *str, char c)
 	char	**new_tab;
 	int		word;
 
+	if (!str)
+		return (NULL);
 	word = num_word(str, c);
 	new_tab = ft_calloc(word + 1, sizeof(char *));
-	if (new_tab == NULL)
+	if (!new_tab)
 		return (NULL);
 	return (check(new_tab, (char *)str, word, c));
 }

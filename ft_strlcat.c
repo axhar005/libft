@@ -6,7 +6,7 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 15:13:25 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/17 16:48:37 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/19 15:51:25 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	i;
 	size_t	len;
 
+	if (!dest || !src)
+		return (0);
 	if (size <= ft_strlen(dest))
 		return (size + ft_strlen(src));
 	len = ft_strlen(dest);

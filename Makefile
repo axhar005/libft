@@ -6,7 +6,7 @@
 #    By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 12:34:33 by oboucher          #+#    #+#              #
-#    Updated: 2023/01/19 13:49:21 by oboucher         ###   ########.fr        #
+#    Updated: 2023/01/19 15:14:21 by oboucher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,11 @@ SRC_BONUS = ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
-	ft_lstadd_back.c
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 
 OBJS_BONUS = $(SRC_BONUS:%.c=%.o)
 
