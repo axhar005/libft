@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = libft.a
-#SRC = $(wildcard *.c)
+
 SRC = ft_atoi.c \
 	ft_bzero.c \
 	ft_calloc.c \
