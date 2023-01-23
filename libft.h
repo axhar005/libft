@@ -6,18 +6,14 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 14:29:31 by oboucher          #+#    #+#             */
-/*   Updated: 2023/01/19 15:14:30 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/01/23 15:19:53 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <ctype.h>
-# include <stddef.h>
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 //struct
