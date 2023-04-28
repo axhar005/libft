@@ -6,13 +6,12 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:57:47 by oboucher          #+#    #+#             */
-/*   Updated: 2023/04/27 22:08:40 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/04/27 22:10:00 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/comparison.h"
 
-//allo
 /// @brief Check if it's a letter or number
 /// @param c is a char
 /// @return 1 = true 0 = false
