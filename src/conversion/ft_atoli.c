@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoli.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 13:35:05 by oboucher          #+#    #+#             */
-/*   Updated: 2023/05/03 15:23:25 by oboucher         ###   ########.fr       */
+/*   Created: 2023/05/03 13:39:51 by oboucher          #+#    #+#             */
+/*   Updated: 2023/05/03 14:01:24 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/comparison.h"
 
-static	int	check(char *str, int i)
+static int	check(char *str, long int i)
 {
-	int	res;
+	long int	res;
 
 	res = 0;
 	while (ft_isdigit(str[i]) == 1)
@@ -25,12 +25,12 @@ static	int	check(char *str, int i)
 	return (res);
 }
 
-/// @brief alphabet to integer
+/// @brief alphabet to long integer
 /// @param str is a string whit dedgit
-int	ft_atoi(const char *str)
+long int	ft_atoli(const char *str)
 {
-	int	sign;
-	int	i;
+	int			sign;
+	long int	i;
 
 	sign = 1;
 	i = 0;
