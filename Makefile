@@ -6,7 +6,7 @@
 #    By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 12:34:33 by oboucher          #+#    #+#              #
-#    Updated: 2023/04/27 21:31:33 by oboucher         ###   ########.fr        #
+#    Updated: 2023/06/05 14:49:19 by oboucher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,7 @@ STRING_DIR = src/string/
 WRITE_FD_DIR = src/write_fd/
 
 
-COMPAR_SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdegit.c ft_isprint.c
+COMPAR_SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdegit.c ft_isprint.c ft_isspace.c
 
 CONVERS_SRC = ft_atoi.c ft_itoa.c ft_tolower.c ft_toupper.c
 
