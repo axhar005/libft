@@ -6,7 +6,7 @@
 #    By: olivierboucher <olivierboucher@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 12:34:33 by oboucher          #+#    #+#              #
-#    Updated: 2023/07/22 15:20:33 by olivierbouc      ###   ########.fr        #
+#    Updated: 2023/07/22 15:51:58 by olivierbouc      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,7 @@ WRITE_FD_SRC = ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 ERROR_SRC = ft_exit.c
 
-ERROR_SRC = ft_stringf.c
+FT_STRINGF_SRC = ft_stringf.c
 
 
 VPATH		=    ${SRCDIR}
