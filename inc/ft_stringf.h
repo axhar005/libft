@@ -6,7 +6,7 @@
 /*   By: olivierboucher <olivierboucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:23:16 by olivierbouc       #+#    #+#             */
-/*   Updated: 2023/07/22 15:15:01 by olivierbouc      ###   ########.fr       */
+/*   Updated: 2023/07/22 15:36:59 by olivierbouc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "conversion.h"
 # include "get_next_line.h"
-# include "inc/error.h"
+# include "error.h"
 # include "memory.h"
 # include "string.h"
 # include <stdarg.h>
