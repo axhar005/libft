@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: olivierboucher <olivierboucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 14:29:31 by oboucher          #+#    #+#             */
-/*   Updated: 2023/04/27 14:28:24 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/07/22 15:34:40 by olivierbouc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@
 # include "memory.h"
 # include "string.h"
 # include "write_fd.h"
+# include "error.h"
+# include "ft_stringf.h"
 
 #endif
