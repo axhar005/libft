@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+         #
+#    By: olivierboucher <olivierboucher@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 12:34:33 by oboucher          #+#    #+#              #
-#    Updated: 2023/06/05 14:49:19 by oboucher         ###   ########.fr        #
+#    Updated: 2023/07/22 15:20:33 by olivierbouc      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,33 +15,22 @@ NAME = libft.a
 
 #--- COMMAND VARIABLES ---#
 CC = gcc
-
 CFLAGS = -Wall -Wextra -Werror
-
 RM = rm -f
-
 AR = ar rcs
-
 MK = mkdir -p
 
 #--- COLORS ---#
 GREEN	=	\033[1;32m
-
 RED		=	\033[1;31m
-
 BLUE	=	\033[1;34m
-
 YELLOW	=	\033[1;93m
-
 WHITE	=	\033[0m
 
 #--- BACKGROUD ---#
 BGREEN	=	\033[0;42m
-
 BRED 	=  	\033[0;101m
-
 BYELLOW =	\033[0;103m
-
 BBLUE =	\033[0;44m
 
 #--- INCLUDE ---#
@@ -57,6 +46,8 @@ LIST_DIR = src/list/
 MEMORY_DIR = src/memory/
 STRING_DIR = src/string/
 WRITE_FD_DIR = src/write_fd/
+ERROR_DIR = src/error/
+FT_STRINGF_DIR = src/ft_stringf/
 
 
 COMPAR_SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdegit.c ft_isprint.c ft_isspace.c
@@ -77,6 +68,10 @@ STRING_SRC = ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_str
 
 WRITE_FD_SRC = ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
+ERROR_SRC = ft_exit.c
+
+ERROR_SRC = ft_stringf.c
+
 
 VPATH		=    ${SRCDIR}
 
@@ -91,8 +86,10 @@ LIST_OBJ = $(addprefix ${OBJDIR}, ${LIST_SRC:%.c=%.o})
 MEMORY_OBJ = $(addprefix ${OBJDIR}, ${MEMORY_SRC:%.c=%.o})
 STRING_OBJ = $(addprefix ${OBJDIR}, ${STRING_SRC:%.c=%.o})
 WRITE_FD_OBJ = $(addprefix ${OBJDIR}, ${WRITE_FD_SRC:%.c=%.o})
+ERROR_OBJ = $(addprefix ${OBJDIR}, ${ERROR_SRC:%.c=%.o})
+FT_STRINGF_OBJ = $(addprefix ${OBJDIR}, ${FT_STRINGF_SRC:%.c=%.o})
 
-ALL_OBJ = $(COMPAR_OBJ) $(CONVERS_OBJ) $(FT_PRINTF_OBJ) $(GET_NEXT_LINE_OBJ) $(LIST_OBJ) $(MEMORY_OBJ) $(STRING_OBJ) $(WRITE_FD_OBJ)
+ALL_OBJ = $(COMPAR_OBJ) $(CONVERS_OBJ) $(FT_PRINTF_OBJ) $(GET_NEXT_LINE_OBJ) $(LIST_OBJ) $(MEMORY_OBJ) $(STRING_OBJ) $(WRITE_FD_OBJ) $(ERROR_OBJ) $(FT_STRINGF_OBJ)
 
 #--- RULES ---#
 
@@ -120,6 +117,11 @@ ${OBJDIR}%.o : ${MEMORY_DIR}%.c
 ${OBJDIR}%.o : ${STRING_DIR}%.c
 	@${CC} ${CFLAGS} -I${INCDIR} -I. -c $< -o $@
 
+${OBJDIR}%.o : ${ERROR_DIR}%.c
+	@${CC} ${CFLAGS} -I${INCDIR} -I. -c $< -o $@
+
+${OBJDIR}%.o : ${FT_STRINGF_DIR}%.c
+	@${CC} ${CFLAGS} -I${INCDIR} -I. -c $< -o $@
 	
 all				: 		$(NAME)
 
