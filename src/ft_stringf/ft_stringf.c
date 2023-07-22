@@ -6,7 +6,7 @@
 /*   By: olivierboucher <olivierboucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:48 by olivierbouc       #+#    #+#             */
-/*   Updated: 2023/07/22 15:18:19 by olivierbouc      ###   ########.fr       */
+/*   Updated: 2023/07/22 16:22:58 by olivierbouc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,9 @@ char	*ft_stringf(const char *str, ...)
 	i = 0;
 	if (!str)
 		return (NULL);
-	new = ft_strdup(str);
+	new = NULL;
+	if (!new)
+		return (NULL);
 	va_start(arg, str);
 	while (new[i])
 	{
@@ -96,8 +98,6 @@ char	*ft_stringf(const char *str, ...)
 		{
 			temp = new;
 			new = sort(arg, new, new[i + 1], i);
-			if (!new)
-				return (NULL);
 			ft_sfree(temp);
 		}
 		i++;
