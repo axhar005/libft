@@ -6,7 +6,7 @@
 /*   By: olivierboucher <olivierboucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 12:15:09 by olivierbouc       #+#    #+#             */
-/*   Updated: 2023/07/22 15:16:15 by olivierbouc      ###   ########.fr       */
+/*   Updated: 2023/08/02 14:59:50 by olivierbouc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_exit(char *str)
 {
-	ft_printf("%s\n", str);
+	if (str)
+		ft_printf("%s\n", str);
 	exit(EXIT_FAILURE);
 }
