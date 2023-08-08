@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: olivierboucher <olivierboucher@student.    +#+  +:+       +#+         #
+#    By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 12:34:33 by oboucher          #+#    #+#              #
-#    Updated: 2023/07/22 15:51:58 by olivierbouc      ###   ########.fr        #
+#    Updated: 2023/08/08 17:20:44 by oboucher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ FT_STRINGF_DIR = src/ft_stringf/
 
 COMPAR_SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdegit.c ft_isprint.c ft_isspace.c
 
-CONVERS_SRC = ft_atoi.c ft_itoa.c ft_tolower.c ft_toupper.c
+CONVERS_SRC = ft_atoi.c ft_atoli.c ft_itoa.c ft_tolower.c ft_toupper.c
 
 FT_PRINTF_SRC = ft_printf.c ft_putnbr_base.c ft_putnbr_unsigned.c ft_putpointer.c
 
