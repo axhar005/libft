@@ -6,13 +6,13 @@
 /*   By: oboucher <oboucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:39:51 by oboucher          #+#    #+#             */
-/*   Updated: 2023/05/03 14:01:24 by oboucher         ###   ########.fr       */
+/*   Updated: 2023/08/08 17:16:24 by oboucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/comparison.h"
 
-static int	check(char *str, long int i)
+static long int	check(char *str, long int i)
 {
 	long int	res;
 
