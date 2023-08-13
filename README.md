@@ -21,7 +21,7 @@ The LIBFT project, conducted in C language, is a captivating endeavor within the
 
 ### HOW TO USE
 ---
-1. All function calls should be prefixed with _**ft_**_, except for get_next_line.
+1. All function calls should be prefixed with ***ft_***, except for get_next_line.
     ````
     ex:
     ft_split("a sd", '_');
