@@ -9,7 +9,7 @@ The LIBFT project, conducted in C language, is a captivating endeavor within the
 ## HOW TO COMPILE LIBFT
 ---
 1. Clone the repo
-    ```sh
+    ```
     $ git clone https://github.com/axhar005/libft.git
     ```
 2. Change _**<libft_directory>**_ and run the _**make**_ command. The program will generate the library _**libft.a**_
